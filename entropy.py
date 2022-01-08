@@ -11,8 +11,8 @@ from matplotlib.figure import Figure
 
 class Window(QtWidgets.QMainWindow):
     fileSize=0
-    freqList=[]
     entropy=0
+    freqList=[]
 
     def __init__(self):
         super().__init__()
@@ -71,7 +71,6 @@ class Window(QtWidgets.QMainWindow):
             e.ignore()
 
     def dropEvent(self, event):
-        print('my message is here')
         files = [u.toLocalFile() for u in event.mimeData().urls()]
         for f in files:
             print(f)
